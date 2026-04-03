@@ -1,0 +1,14 @@
+node_modules/
+dist/
+.data/
+
+# Local credentials / tokens (never commit)
+credentials.json
+**/credentials.json
+**/*token*.json
+**/*credentials*.json
+
+# OS / editor
+.DS_Store
+.env
+.env.*
