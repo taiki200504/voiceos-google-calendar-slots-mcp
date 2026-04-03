@@ -1,8 +1,15 @@
 import { addMinutes, differenceInMinutes, endOfWeek, startOfWeek } from "date-fns";
 import { getDefaultTimezone } from "./config.js";
-import type { CalendarEvent } from "./calendar.js";
 import { clampInterval, mergeIntervals, subtractIntervals, type Interval } from "./intervals.js";
 import { estimateTravelMinutes, getDefaultBufferMinutes } from "./travel.js";
+
+export type CalendarEvent = {
+  id: string;
+  summary?: string;
+  location?: string;
+  start: Date;
+  end: Date;
+};
 
 export type WorkingHours = {
   startHour: number; // 0-23
